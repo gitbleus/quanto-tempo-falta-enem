@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../styles/global.css';
+import {styles} from '../styles/components';
+import {Countdown} from '../components/Countdown.tsx';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<main class={styles.container}>
+
+		<header class="flex flex-col items-center mb-8 md:mb-16 z-10">
+			<h1 class={styles.titleMain}>
+				Quanto tempo falta para o ENEM?
+			</h1>
+		</header>
+
+		<Countdown client:load />
+
+		<Footer />
+	</main>
 </Layout>

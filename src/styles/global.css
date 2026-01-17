@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-enem-bg: #0D0D0D;       /* Slate 900 */
+  --color-enem-card: #1e293b;     /* Slate 800 */
+  --color-enem-text: #f8fafc;     /* Slate 50 */
+  --color-enem-accent: #3b82f6;   /* Blue 500 */
+  --color-enem-highlight: #eab308; /* Yellow 500 */
+
+  --animate-fade-in: fade-in 0.5s ease-out;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--color-enem-bg);
+  color: var(--color-enem-text);
+}
